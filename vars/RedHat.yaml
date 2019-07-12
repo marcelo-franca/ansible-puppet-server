@@ -1,0 +1,8 @@
+---
+packages_redhat:
+  - yum-utils
+  - device-mapper-persistent-data
+  - rsync
+  - puppetserver
+  - git
+

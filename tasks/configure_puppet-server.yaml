@@ -1,0 +1,8 @@
+- name: Set puppet config file
+  template:
+    src: puppet.conf.j2
+    dest: '{{ puppet_confdir }}/puppet.conf'
+    owner: root
+    group: root
+    mode: 0644
+  tags: puppet-server

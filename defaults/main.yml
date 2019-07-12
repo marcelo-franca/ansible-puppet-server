@@ -1,2 +1,12 @@
 ---
 # defaults file for ansible-puppet-server
+puppet_release: puppet6-release-el-7.noarch.rpm
+puppet_server: lppsp1001.uckg.us
+puppet_certname: lppsp1001.uckg.us
+puppet_confdir: /etc/puppetlabs/puppet
+## Config file
+puppet_vardir: /opt/puppetlabs/server/data/puppetserver
+puppet_logdir: /var/log/puppetlabs/puppetserver
+puppet_rundir: /var/run/puppetlabs/puppetserver
+puppet_pidfile: /var/run/puppetlabs/puppetserver/puppetserver.pid
+puppet_codedir: /etc/puppetlabs/code

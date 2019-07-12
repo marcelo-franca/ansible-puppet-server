@@ -1,0 +1,27 @@
+---
+- name: Sets variable Linux distributions
+  include_vars: "{{ ansible_os_family }}.yaml"
+  tags: puppet-server
+
+- name: Import Puppet Server Repository for Debian
+  when: ansible_os_family == "Debian"
+  apt:
+    name: https://apt.puppetlabs.com/{{ puppet_release }}
+  tags: puppet-server
+
+- name: Import Puppet Server Repository for RedHat/CentOS 7
+  when: ansible_os_family == "RedHat"
+  yum:
+    name: "https://yum.puppet.com/{{ puppet_release }}"
+    state: present
+  tags: puppet-server
+
+- name: Install Puppet Server on RedHat/CentOS
+  when: ansible_os_family == "RedHat"
+  yum:
+    name: "{{ packages_redhat }}"
+    state: present
+  notify:
+    - Enable Puppet
+    - Start Puppet
+  tags: puppet-server

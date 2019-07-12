@@ -1,2 +1,7 @@
 ---
-# tasks file for ansible-puppet-server
+- name: Configure local firewall polices
+  import_tasks: firewall_rules.yaml
+- name: Install Puppet Server
+  import_tasks: install_puppet-server.yaml
+- name: Configure Puppet Server
+  import_tasks: configure_puppet-server.yaml

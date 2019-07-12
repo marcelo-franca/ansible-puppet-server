@@ -1,2 +1,10 @@
 ---
 # handlers file for ansible-puppet-server
+- name: Start Puppet
+  service:
+    name: puppetserver
+    state: started
+- name: Enable Puppet
+  systemd:
+    name: puppetserver
+    enabled: yes
