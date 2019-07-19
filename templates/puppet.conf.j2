@@ -5,5 +5,5 @@ rundir = "{{ puppet_rundir }}"
 pidfile = "{{ puppet_pidfile }}"
 codedir = "{{ puppet_codedir }}"
 [agent]
-server = "{{ puppet_server }}"
-certname = "{{ puppet_certname }}"
+server = {{ puppet_server }}
+certname = {{ puppet_certname }}
