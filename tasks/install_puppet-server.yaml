@@ -15,7 +15,12 @@
     name: "https://yum.puppet.com/{{ puppet_release }}"
     state: present
   tags: puppet-server
-
+- name: Install vim-puppet for RedHat/CentOS
+  when: ansible_os_family == "RedHat"
+  yum:
+    name: "{{ vim-puppet }}"
+    stage: present
+  tags: puppet-server
 - name: Install Puppet Server on RedHat/CentOS
   when: ansible_os_family == "RedHat"
   yum:
