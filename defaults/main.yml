@@ -4,9 +4,11 @@ puppet_release: puppet6-release-el-7.noarch.rpm
 puppet_server: lppsp1001.uckg.us
 puppet_certname: lppsp1001.uckg.us
 puppet_confdir: /etc/puppetlabs/puppet
+vim-puppet: http://ftp.tu-chemnitz.de/pub/linux/dag/redhat/el6/en/i386/rpmforge/RPMS/vim-puppet-2.7.9-1.el6.rf.noarch.rpm
 ## Config file
 puppet_vardir: /opt/puppetlabs/server/data/puppetserver
 puppet_logdir: /var/log/puppetlabs/puppetserver
 puppet_rundir: /var/run/puppetlabs/puppetserver
 puppet_pidfile: /var/run/puppetlabs/puppetserver/puppetserver.pid
 puppet_codedir: /etc/puppetlabs/code
+
