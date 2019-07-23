@@ -4,5 +4,7 @@ packages_redhat:
   - device-mapper-persistent-data
   - rsync
   - puppetserver
+  - pdk
+  - ruby
   - git
 
